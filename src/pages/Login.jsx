@@ -63,7 +63,7 @@ const Login = ({ closeModal, setIsOpen, handleSuccess }) => {
             setLoading(true);
 
             const email = Name.toLocaleLowerCase();
-            const password = Password.toLocaleLowerCase();
+            const password = Password;
 
             const response = await login({ email, password }).unwrap(); // call the mutation function with the form data
             dispatch(setUserData(response.data.user));
@@ -81,7 +81,7 @@ const Login = ({ closeModal, setIsOpen, handleSuccess }) => {
         <AuthLayout>
             <div className="flex justify-between w-full h-full flex-wrap">
                 <AuthSlider />
-                <div className="flex -mt-80 md:-mt-0 items-left justify-center flex-col w-full lg:w-1/2 lg:px-28 px-6">
+                <div className="flex   md:-mt-0 items-left justify-center flex-col w-full lg:w-1/2 lg:px-28 px-6">
                     <h3 className=" text-2xl font-semibold text-gray-700 ">Welcome back</h3>
                     <p className=" text-sm mt-2 mb-10 text-black">
                         New to Faremit?{" "}

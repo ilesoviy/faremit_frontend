@@ -11,7 +11,7 @@ import { useSignupMutation, useSignupOtpMutation } from "../store/Signup";
 import Alert from "../components/controllers/Alert";
 import { Info } from "lucide-react";
 import AuthSlider from "../components/auth/Slider";
-import { CountryDropdown, TextInput } from "../components/controllers/Countries";
+import { CountryDropdown, PhoneInput, TextInput } from "../components/controllers/Countries";
 const RegistrationForm = ({ closeModal, setactive, handleThemeChange }) => {
     const countries = [
         {
@@ -81,23 +81,24 @@ const RegistrationForm = ({ closeModal, setactive, handleThemeChange }) => {
         }
         setIsLoading(false);
     };
-
+    console.log(formData.password);
     const handleSubmit = async () => {
         const data = {
-            fullName: formData.fullName.toLowerCase(),
+            fullName: formData.fullName,
             country: formData.Country,
-            Email: formData.email.toLowerCase(),
+            Email: formData.email,
+            password: formData.password,
             address: formData.address,
             city: formData.city,
             userOTP: formData.userOTP,
-            phone: formData.phone,
-            password: formData.password.toLowerCase()
+            phone: formData.phone
         };
 
         try {
             setIsLoading(true);
             const response = await Signup(data).unwrap();
             if (response) {
+                toast.success("Congrats Registration successful");
                 setSuccess(response.message);
                 toast.success("Congrats Registration successful");
                 navigate("/login");
@@ -128,7 +129,7 @@ const RegistrationForm = ({ closeModal, setactive, handleThemeChange }) => {
         <AuthLayout>
             <div className="flex justify-between w-full h-full flex-wrap">
                 <AuthSlider />
-                <div className="flex -mt-60 md:mt-0 items-left justify-center flex-col w-full lg:w-1/2 lg:px-28 px-6">
+                <div className="flex  overflow-hidden z-50 md:mt-0 items-left justify-center flex-col w-full lg:w-1/2 lg:px-28 px-6">
                     {currentStep === 2 && (
                         <>
                             <h3 className="text-2xl font-semibold text-gray-700 ">
@@ -163,7 +164,7 @@ const RegistrationForm = ({ closeModal, setactive, handleThemeChange }) => {
                             <h1 className="w-full text-3xl font-medium text-[#0f172a]">
                                 Finish setting up your account
                             </h1>
-                            <p className="mt-3 w-full text-base font-medium tracking-wide leading-6 text-[#404040]">
+                            <p className="-mt-3 mb-3 w-full text-base font-medium tracking-wide leading-6 text-[#404040]">
                                 Please provide your legally valid information
                             </p>
                         </>
@@ -285,11 +286,11 @@ const RegistrationForm = ({ closeModal, setactive, handleThemeChange }) => {
                                     }
                                     countries={countries} // Pass the countries array
                                 />
-                                {/* <PhoneInput
+                                <PhoneInput
                                     selectedCountry={formData.Country}
-                                    value={formData.phone}
+                                    value={formData}
                                     handleChange={handleChange}
-                                /> */}
+                                />
                                 <TextInput
                                     label="City"
                                     placeholder="Enter City"

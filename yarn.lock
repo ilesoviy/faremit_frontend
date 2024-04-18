@@ -2065,6 +2065,16 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@sumsub/websdk-react@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@sumsub/websdk-react/-/websdk-react-2.2.1.tgz#37e6d9fc2d4410e0310fc93ec9a46a2fb5b9e74f"
+  integrity sha512-So09kyYDGZPLYE8JdPxKRFjlhpUwmJTg1eCP49lGCJvoTwocFEo+cUxqBAQf7XiLXcE8wfcEOrWBkDz4vAuqsA==
+
+"@sumsub/websdk@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@sumsub/websdk/-/websdk-2.2.1.tgz#cc47f2fcfe28f1b8db01e017765e1e709d360567"
+  integrity sha512-vkWt1CjxCo99NvzGfxpyEhU/xt0gBXNkOQYbCFyUW+XZU9Pcz8RaWB7UaAYchMYb73PIQztm8Y4+Utf1ekb8Fg==
+
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
   resolved "https://registry.npmjs.org/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-2.2.3.tgz"

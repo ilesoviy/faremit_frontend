@@ -7,15 +7,8 @@ import { setTransactionData } from "../../store/Slices/transferSlice";
 import ModalContainer from "../modal/ModalContainer";
 
 import { Selection } from "./field";
-import australia from "./flags/australia.png";
 import canada from "./flags/canada.png";
-import england from "./flags/england.png";
-import ethiopia from "./flags/ethiopia.png";
-import Ghana from "./flags/Ghana.png";
 import kenya from "./flags/kenya.png";
-import norwey from "./flags/norwey.png";
-import somalia from "./flags/somalia.png";
-import uganda from "./flags/uganda.png";
 import UnitedState from "./flags/UnitedState.png";
 
 const TransferForm = () => {
@@ -112,8 +105,8 @@ const TransferForm = () => {
     return (
         <div
             className="flex justify-center items-start w-full md:w-[481px] h-[508px]  relative gap-2 rounded-xl 
-            
-            "
+        
+        "
         >
             {" "}
             <div className="flex overflow-hidden z-50 justify-center items-start w-full md:w-[461px] h-full relative gap-2 rounded-xl bg-white border border-secondary shadow-lg">
@@ -126,6 +119,7 @@ const TransferForm = () => {
                         enteredValue={enteredValue}
                         handleInput={handleInput}
                         title="You send"
+                        istwo={false}
                     />
                     <div className="flex justify-between cursor-not-allowed items-center flex-grow-0 flex-shrink-0 w-full  px-5 py-3 rounded-xl  border border-secondary">
                         <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1">
@@ -275,6 +269,7 @@ const TransferForm = () => {
                                 setEntered(e.target.value);
                                 calculate(selectedOption, oppositeOption, enteredValue);
                             }}
+                            istwo={true}
                         />{" "}
                     </div>
 

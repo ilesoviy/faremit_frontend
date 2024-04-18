@@ -67,7 +67,7 @@ const Nav = () => {
                 </Link>
                 {checkUser() ? (
                     <>
-                        <div className="space-x-4 xl:space-x-8 hidden md:block">
+                        {/* <div className="space-x-4 xl:space-x-8 hidden md:block">
                             <Link
                                 to="#personal"
                                 className="transition-all duration-300 font-medium py-2 xl:py-3 hover:text-indigo-600"
@@ -80,7 +80,7 @@ const Nav = () => {
                             >
                                 Transfer History
                             </Link>
-                        </div>
+                        </div> */}
                         <Menu>
                             <div className="relative">
                                 {verificationStatus === false ? (

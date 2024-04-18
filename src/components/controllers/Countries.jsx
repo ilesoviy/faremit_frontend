@@ -1,6 +1,5 @@
 /* eslint-disable import/order */
 import React, { useEffect, useState } from "react";
-import PhoneInput1 from "react-phone-input-2";
 import Select from "react-select";
 import "react-phone-input-2/lib/style.css"; // Import isValidNumber and format from libphonenumber-js
 import "react-phone-number-input/style.css";
@@ -252,6 +251,12 @@ export function PhoneInput({ selectedCountry, handleChange, value }) {
         <div className="flex flex-col justify-center w-full text-sm bg-white rounded-md border border-secondary border-solid">
             <div className="flex gap-2">
                 <div className="flex gap-2 whitespace-nowrap text-slate-900">
+                    {" "}
+                    <img
+                        src={selectedCountry.flag}
+                        alt=""
+                        className="shrink-0 w-6 aspect-square"
+                    />{" "}
                     <div className="my-auto">{selectedCountry.code}</div>
                 </div>
                 <div className="flex-1 my-auto text-gray-400">
@@ -260,9 +265,9 @@ export function PhoneInput({ selectedCountry, handleChange, value }) {
                     </label>
                     <input
                         type="tel"
-                        name="phoneNumber"
+                        name="phone" // Update the name attribute to "phone"
                         placeholder="Enter phone number"
-                        value={value}
+                        value={value.phone}
                         onChange={handleChange}
                         className="w-full bg-transparent focus:outline-none"
                     />

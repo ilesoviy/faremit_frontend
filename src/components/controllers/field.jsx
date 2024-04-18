@@ -189,7 +189,8 @@ export const Selection = props => {
         handleChange,
         enteredValue,
         handleInput,
-        readOnly
+        readOnly,
+        istwo
     } = props;
     const currencyToCountryCode = {
         KES: kenya, // Kenyan Shilling
@@ -213,7 +214,7 @@ export const Selection = props => {
     return (
         <div className="flex space-x-3 space-y-6 items-center max-w-full">
             {/* input send */}
-            <div className="flex justify-between items-center flex-grow-0 flex-shrink-0 w-full h-full  md:px-5 rounded-xl bg-white border border-secondary">
+            <div className="flex justify-between items-center flex-grow-0 flex-shrink-0 w-max h-full  md:px-5 rounded-xl bg-white border border-secondary">
                 <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1">
                     <p className="flex-grow-0 md:ml-1 flex-shrink-0 text-sm font-semibold text-left text-[#5c5676]">
                         {title}
@@ -233,7 +234,7 @@ export const Selection = props => {
                         <div
                             className="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative
                                   md:gap-3 md:pl-3 py-[23.5px] border-t-0 -ml-10 md:ml-0 border-r-0 border-b-0 border-l border-[#c7c4d4]"
-                            style={{ zIndex: 10000000 }}
+                            style={{ zIndex: 10000000000 }}
                         >
                             <Menu.Button className="flex justify-start items-center flex-grow-0 flex-shrink-0 relative md:gap-2 cursor-pointer">
                                 <img
@@ -271,11 +272,15 @@ export const Selection = props => {
                                 leaveTo="transform scale-95 opacity-0"
                             >
                                 <Menu.Items className="overflow-hidden z-50">
-                                    <div className="absolute right-28 md:right-0 top-10 z-50 px-2 py-1  w-[334px] md:w-96 h-64 overflow-scroll ov text-gray-600 bg-white border border-Grey-400 rounded-md shadow">
+                                    <div
+                                        className={`${
+                                            istwo ? "-mt-20 h-max" : "h-max"
+                                        } absolute md:right-28 right-0  top-10 z-50 px-2 py-1  w-[334px] md:w-96 h-64 overflow-scroll ov text-gray-600 bg-white border border-secondary rounded-md shadow`}
+                                    >
                                         <form>
                                             <label
                                                 for="default-search"
-                                                class="mb-2 text-md font-medium text-gray-900 sr-only"
+                                                class="mb-2 text-md font-medium text-secondary sr-only"
                                             >
                                                 Search
                                             </label>
@@ -301,7 +306,7 @@ export const Selection = props => {
                                                     type="search"
                                                     onChange={e => setSearchInput(e.target.value)}
                                                     id="default-search"
-                                                    class="block w-full p-2.5 ps-10 text-md text-gray-900 border border-Grey-200 rounded-lg   focus:ring-0 outline-none"
+                                                    class="block w-full p-2.5 ps-10 text-md text-gray-900 border border-secondary rounded-lg   focus:ring-0 outline-none"
                                                     placeholder="Search country"
                                                     required
                                                 />
