@@ -117,6 +117,7 @@ class AnchorDeposit(DepositIntegration):
         request: Request, 
         transaction: Transaction
     ):
+        print("arrived here!")
         transaction.status = Transaction.STATUS.pending_user_transfer_start
         transaction.amount_in = Decimal(request.query_params.get("amount"))
         transaction.amount_fee = Decimal(request.query_params.get("amount_fee"))

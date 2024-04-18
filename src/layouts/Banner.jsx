@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { useState } from "react";
-import TransferForm from "../components/controllers/TransferForm";
-import ModalContainer from "../components/modal/ModalContainer";
-import { Container } from "../components/utils";
+import TransferForm from "@components/controllers/TransferForm";
+import ModalContainer from "@components/modal/ModalContainer";
+import { Container } from "@components/utils";
 
 const Banner = () => {
     const [modalOpen, setModalOpen] = useState(false);
