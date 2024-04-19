@@ -52,8 +52,7 @@ const TransferForm = () => {
     const navigate = useNavigate();
 
     const calculate = (selected, opposite, entered) => {
-        //fetch(`https://api.faremit.com/api/paircode/${selected}/${opposite}/${entered}`)
-        fetch(`http://localhost:3000/api/paircode/${selected}/${opposite}/${entered}`)
+        fetch(`https://api.faremit.com/api/paircode/${selected}/${opposite}/${entered}`)
             .then(res => res.json())
             .then(res => {
                 const rate = res.conversion_rate.toFixed();

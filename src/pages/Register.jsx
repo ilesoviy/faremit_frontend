@@ -16,19 +16,16 @@ const RegistrationForm = ({ closeModal, setactive, handleThemeChange }) => {
     const countries = [
         {
             name: "United States",
-            label: "US United States",
             code: "+1",
             flag: "https://hatscripts.github.io/circle-flags/flags/us.svg"
         },
         {
             name: "Canada",
-            label: "CA Canada",
             code: "+1",
             flag: "https://hatscripts.github.io/circle-flags/flags/ca.svg"
         },
         {
             name: "United Kingdom",
-            label: "UK United Kingdom",
             code: "+44",
             flag: "https://hatscripts.github.io/circle-flags/flags/gb.svg"
         }
