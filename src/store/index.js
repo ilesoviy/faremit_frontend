@@ -10,10 +10,11 @@ import { checkUser } from "../helpers";
 import { AccountsReducer } from "./Slices/AccountsSlice";
 import { transferReducer } from "./Slices/transferSlice";
 import { UserReducer } from "./Slices/UserInfo";
+import { stellarApi } from "../services/stellarApi";
 
 export const Rootapi = createApi({
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://api.faremit.com/api/",
+        baseUrl: "http://localhost:3000/api/",
         prepareHeaders: (headers, { getState }) => {
             const token = localStorage.getItem("token");
             if (token) {
@@ -27,6 +28,7 @@ export const Rootapi = createApi({
 
 const appReducer = combineReducers({
     [Rootapi.reducerPath]: Rootapi.reducer,
+    [stellarApi.reducerPath]: stellarApi.reducer,
     transfer: transferReducer,
     User: UserReducer,
     Account: AccountsReducer
@@ -49,7 +51,8 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
     reducer: persistedReducer,
-    middleware: getDefaultMiddleware => getDefaultMiddleware().concat(Rootapi.middleware)
+    middleware: getDefaultMiddleware =>
+        getDefaultMiddleware().concat(Rootapi.middleware, stellarApi.middleware)
     // devTools: false
 });
 

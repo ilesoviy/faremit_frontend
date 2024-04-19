@@ -1,6 +1,7 @@
 import FAQ from "../components/Faq";
 import AboutUs from "../components/Home/AboutUs";
 import PaymentMethods from "../components/Home/PaymentMethods";
+import Banking from "../components/Home/Banking";
 import SupportedCountries from "../components/Home/SupportedCountries";
 import StepsComponent from "../components/Home/stepsComponent";
 import Banner from "../layouts/Banner";
@@ -18,6 +19,7 @@ const Home = () => {
                         <AboutUs />
                         <StepsComponent />
                         <PaymentMethods />
+                        <Banking />
                         <SupportedCountries />
                         <FAQ />
                         <Footer />
