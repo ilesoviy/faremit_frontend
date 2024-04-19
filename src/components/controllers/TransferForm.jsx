@@ -52,7 +52,7 @@ const TransferForm = () => {
     const navigate = useNavigate();
 
     const calculate = (selected, opposite, entered) => {
-        fetch(`http://localhost:3000/api/paircode/${selected}/${opposite}/${entered}`)
+        fetch(`https://api.faremit.com/api/paircode/${selected}/${opposite}/${entered}`)
             .then(res => res.json())
             .then(res => {
                 const rate = res.conversion_rate.toFixed();
@@ -105,8 +105,8 @@ const TransferForm = () => {
     return (
         <div
             className="flex justify-center items-start w-full md:w-[481px] h-[508px]  relative gap-2 rounded-xl 
-            
-            "
+        
+        "
         >
             {" "}
             <div className="flex overflow-hidden z-50 justify-center items-start w-full md:w-[461px] h-full relative gap-2 rounded-xl bg-white border border-secondary shadow-lg">
