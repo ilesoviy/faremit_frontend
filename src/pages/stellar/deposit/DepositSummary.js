@@ -60,6 +60,7 @@ const DepositSummary = () => {
 
     const validateRequest = async () => {
         setIsLoading(true);
+        console.log(config.headers.Authorization);
         try {
             let data = await axios.get(
                 `http://localhost:8000/sep24/transactions/${type}/interactive/complete`,

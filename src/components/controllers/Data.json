@@ -65,6 +65,12 @@
             "receiveCountry": "MX",
             "rate": 22.67,
             "currency": "MXN"
+        },
+        {
+            "sendCountry": "AU",
+            "receiveCountry": "NG",
+            "rate": 294.45,
+            "currency": "NGN"
         }
     ]
 }

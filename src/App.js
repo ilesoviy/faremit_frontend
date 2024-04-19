@@ -54,72 +54,72 @@ const App = () => {
                 <Route
                     path="/stellar/deposit"
                     element={
-                        <Auth>
+                        <Guest>
                             <StellarDeposit />
-                        </Auth>
+                        </Guest>
                     }
                 />
                 <Route
                     exact
                     path="/stellar/deposit-account"
                     element={
-                        <Auth>
+                        <Guest>
                             <StellarDepositAccount />
-                        </Auth>
+                        </Guest>
                     }
                 />
                 <Route
                     exact
                     path="/stellar/proof-of-payment"
                     element={
-                        <Auth>
+                        <Guest>
                             <StellarDepositPOP />
-                        </Auth>
+                        </Guest>
                     }
                 />
                 <Route
                     exact
                     path="/stellar/deposit-status"
                     element={
-                        <Auth>
+                        <Guest>
                             <StellarDepositSummary />
-                        </Auth>
+                        </Guest>
                     }
                 />
                 <Route
                     exact
                     path="/deposit-success"
                     element={
-                        <Auth>
+                        <Guest>
                             <DepositSuccess />
-                        </Auth>
+                        </Guest>
                     }
                 />
                 <Route
                     exact
                     path="/stellar/withdraw"
                     element={
-                        <Auth>
+                        <Guest>
                             <StellarWithdraw />
-                        </Auth>
+                        </Guest>
                     }
                 />
                 <Route
                     exact
                     path="/stellar/withdraw-status"
                     element={
-                        <Auth>
+                        <Guest>
                             <StellarWithdrawSummary />
-                        </Auth>
+                        </Guest>
                     }
                 />
                 <Route
                     exact
                     path="/stellar/withdraw-success"
                     element={
-                        <Auth>
+                        <Guest>
                             <WithdrawSuccess />
-                        </Auth>
+                        </Guest>
                     }
                 />
                 <Route
