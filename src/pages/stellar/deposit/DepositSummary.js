@@ -126,7 +126,7 @@ const DepositSummary = () => {
                     <div>
                         <h1 className="text-black text-sm font-semibold">{type} Amount</h1>
                         <p className="capitalize text-gray-600 font-medium text-sm">
-                            {newAmount} NGN
+                            {newAmount} {asset_code}
                         </p>
                     </div>
                     {bankName !== null ? (
@@ -157,7 +157,7 @@ const DepositSummary = () => {
                         ) : (
                             <p className="text-gray-600 font-medium text-sm md:text-sm">
                                 Please confirm transaction. We would make a bank deposit to the
-                                account provided once NGNC is released.
+                                account provided once TEST is released.
                             </p>
                         )}
                     </div>

@@ -9,7 +9,7 @@ export const WithdrawSuccess = () => {
             </h1>
             <CheckSuccess width={200} height={200} />
             <p className="text-black text-base w-96 mx-auto text-center">
-                When your asset has been received, a vendor will send NGN to the bank account
+                When your asset has been received, a vendor will send currency to the bank account
                 provided.
             </p>
             <div>

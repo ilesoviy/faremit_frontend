@@ -134,22 +134,6 @@ export function CheckSuccess(props) {
   );
 }
 
-export function NGN(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 27 35"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M3.264 35V23.144H0.48V19.592H3.264V16.136H0.48V12.584H3.264V0.727998H10.8L14.544 12.584H18.912V0.727998H24.24V12.584H26.976V16.136H24.24V19.592H26.976V23.144H24.24V35H16.656L12.816 23.144H8.592V35H3.264ZM8.592 19.592H11.76L10.704 16.136H8.496L8.592 19.592ZM19.056 27.512H19.296L19.104 23.144H17.808L19.056 27.512ZM8.4 12.584H9.744L8.352 7.976H8.16L8.4 12.584ZM16.8 19.592H19.008L18.912 16.136H15.696L16.8 19.592Z"
-        fill="black"
-      />
-    </svg>
-  );
-}
-
 export function Spinner(props) {
   return (
     <svg

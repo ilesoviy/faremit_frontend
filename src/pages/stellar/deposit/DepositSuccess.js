@@ -9,7 +9,7 @@ export const DepositSuccess = () => {
             </h1>
             <CheckSuccess width={200} height={200} />
             <p className="text-black text-base w-96 mx-auto text-center">
-                When your NGN has been received by the vendor, your wallet will be funded.
+                When your TEST has been received by the vendor, your wallet will be funded.
             </p>
             <div>
                 <Link to="/user/dashboard">

@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { GHC, NGN, USD } from "@assets/images";
+import { USD } from "@assets/images";
 import { useForm } from "react-hook-form";
 //import { Header } from "@components";
 import { ImSpinner2 } from "react-icons/im";
@@ -26,8 +26,6 @@ const StellarDeposit = () => {
     } = useForm();
 
     const currencyArr = {
-        GHC: GHC,
-        NGN: NGN,
         USD: USD
     };
 
