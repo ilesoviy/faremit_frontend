@@ -13,7 +13,7 @@ import { UserReducer } from "./Slices/UserInfo";
 
 export const Rootapi = createApi({
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://api.faremit.com/api/",
+        baseUrl: "http://localhost:3000/api/",
         prepareHeaders: (headers, { getState }) => {
             const token = localStorage.getItem("token");
             if (token) {
