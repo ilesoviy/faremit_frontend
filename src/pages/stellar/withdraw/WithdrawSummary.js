@@ -47,7 +47,7 @@ const WithdrawSummary = () => {
     };
 
     // Function to close the popup window
-    function closePopup() {
+    function closePopup () {
         // Send a message to the opener window to indicate completion
         window.opener.postMessage("success", "*");
 
@@ -59,12 +59,12 @@ const WithdrawSummary = () => {
         setIsLoading(true);
         try {
             let data = await axios.get(
-                `http://localhost:8000/sep24/transactions/${type}/interactive/complete`,
+                `http://cryptoprince0207.online/sep24/transactions/${type}/interactive/complete`,
                 config
             );
             if (data.status === 200) {
                 window.location.replace(
-                    `http://localhost:8000/sep24/transaction/more_info?id=${transaction_id}`
+                    `http://cryptoprince0207.online/sep24/transaction/more_info?id=${transaction_id}`
                 );
             }
         } catch (error) {
@@ -172,7 +172,7 @@ const WithdrawSummary = () => {
 
 export default WithdrawSummary;
 
-function Logo({ width, height }) {
+function Logo ({ width, height }) {
     return (
         <svg
             width={width}

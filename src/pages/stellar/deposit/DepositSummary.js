@@ -60,20 +60,20 @@ const DepositSummary = () => {
 
     const validateRequest = async () => {
         setIsLoading(true);
-        console.log(`[DAVID] ------------validateRequest state = ${JSON.stringify(location?.state)}---------`)
+        console.log(
+            `[DAVID] ------------validateRequest state = ${JSON.stringify(
+                location?.state
+            )}---------`
+        );
         console.log(config.headers.Authorization);
         try {
             let data = await axios.get(
-                `http://localhost:8000/sep24/transactions/${type}/interactive/complete`,
+                `https://cryptoprince0207.online/sep24/transactions/${type}/interactive/complete`,
                 config
             );
-            // let data = await axios.get(
-            //     `http://localhost:8000/sep24/transactions/deposit/interactive/complete`,
-            //     config
-            // );
             if (data.status === 200) {
                 window.location.replace(
-                    `http://localhost:8000/sep24/transaction/more_info?id=${transaction_id}`
+                    `http://cryptoprince0207.online/sep24/transaction/more_info?id=${transaction_id}`
                 );
             }
         } catch (error) {
