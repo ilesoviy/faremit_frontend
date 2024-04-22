@@ -304,7 +304,7 @@ const StellarWithdraw = () => {
                             >
                                 <span>Continue</span>
                             </button>
-                        ) : withdraw.amount < 10000 ? (
+                        ) : withdraw.amount < 100 ? (
                             <button
                                 type="button"
                                 disable={true}
